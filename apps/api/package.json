@@ -1,0 +1,18 @@
+{
+  "name": "@chaos-dms/api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "echo \"api dev placeholder\"",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@chaos-dms/types": "workspace:*",
+    "@chaos-dms/validators": "workspace:*",
+    "@chaos-dms/utils": "workspace:*"
+  }
+}

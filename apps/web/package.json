@@ -1,0 +1,19 @@
+{
+  "name": "@chaos-dms/web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"web build placeholder\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "echo \"web dev placeholder\"",
+    "clean": "rimraf .next .turbo"
+  },
+  "dependencies": {
+    "@chaos-dms/types": "workspace:*",
+    "@chaos-dms/ui": "workspace:*",
+    "@chaos-dms/api-client": "workspace:*",
+    "@chaos-dms/utils": "workspace:*"
+  }
+}

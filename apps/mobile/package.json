@@ -1,0 +1,19 @@
+{
+  "name": "@chaos-dms/mobile",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"mobile build placeholder\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "echo \"mobile dev placeholder\"",
+    "clean": "rimraf dist .expo .turbo"
+  },
+  "dependencies": {
+    "@chaos-dms/types": "workspace:*",
+    "@chaos-dms/ui": "workspace:*",
+    "@chaos-dms/api-client": "workspace:*",
+    "@chaos-dms/utils": "workspace:*"
+  }
+}

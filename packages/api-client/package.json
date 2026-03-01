@@ -1,0 +1,23 @@
+{
+  "name": "@chaos-dms/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf dist .turbo"
+  },
+  "devDependencies": {
+    "@chaos-dms/types": "workspace:*"
+  }
+}
