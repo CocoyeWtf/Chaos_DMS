@@ -11,6 +11,7 @@ export default tseslint.config(
       '**/.expo/**',
       '**/.turbo/**',
       '**/coverage/**',
+      '**/drizzle.*.config.ts',
     ],
   },
 

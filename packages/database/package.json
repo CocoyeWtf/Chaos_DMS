@@ -1,0 +1,48 @@
+{
+  "name": "@chaos-dms/database",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./public": {
+      "types": "./dist/schema/public/index.d.ts",
+      "import": "./dist/schema/public/index.js"
+    },
+    "./tenant": {
+      "types": "./dist/schema/tenant/index.d.ts",
+      "import": "./dist/schema/tenant/index.js"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf dist .turbo",
+    "db:generate:public": "drizzle-kit generate --config=drizzle.public.config.ts",
+    "db:generate:tenant": "drizzle-kit generate --config=drizzle.tenant.config.ts",
+    "db:migrate": "tsx src/migrate/run.ts",
+    "db:seed": "tsx src/seed/index.ts",
+    "db:studio": "drizzle-kit studio --config=drizzle.public.config.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.1",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "dotenv": "^16.4.0",
+    "drizzle-kit": "^0.31.9",
+    "tsx": "^4.19.0"
+  }
+}

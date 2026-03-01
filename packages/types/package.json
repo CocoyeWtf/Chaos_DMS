@@ -7,7 +7,8 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {
@@ -16,5 +17,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@chaos-dms/database": "workspace:*"
   }
 }
